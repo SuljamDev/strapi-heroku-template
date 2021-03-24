@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "demo_pages",
+  "info": {
+    "name": "demoPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "featuredImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
